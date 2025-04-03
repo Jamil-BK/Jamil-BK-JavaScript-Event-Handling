@@ -1,0 +1,120 @@
+/* Overall section styling */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;  /* Increased padding for better spacing */
+    min-height: 300px;    /* Increased section height */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Section title centered */
+h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.ripple-btn {
+    position: relative;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect on the button */
+.ripple-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Ripple effect styling */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Message Box Styling */
+#messageBox {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.9;
+    margin-top: 0;
+    padding: 20px;
+    width: 300px; /* Fixed width for the message box */
+    height: 150px; /* Increased height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+/* Hover effect on message box */
+#messageBox.hovering {
+    color: #007bff;
+    font-size: 20px;
+    opacity: 1;
+    background-color: #f0f8ff;  /* Light blue background on hover */
+}
+
+/* Message on click effect */
+#messageBox.clicked {
+    color: #28a745;
+    font-size: 22px;
+    transform: scale(1.1);
+    background-color: #d4edda;  /* Light green background on click */
+}
+
+/* Section Background Colors for Differentiation */
+.section-bg-1 {
+    background-color: #f8d7da;  /* Light red for Mouse Events */
+}
+
+.section-bg-2 {
+    background-color: #d1ecf1;  /* Light blue for Keyboard Events */
+}
+
+.section-bg-3 {
+    background-color: #c3e6cb;  /* Light green for Form Events */
+}
+
+.section-bg-4 {
+    background-color: #fff3cd;  /* Light yellow for Focus/Blur Events */
+}
+
+.section-bg-5 {
+    background-color: #e2e3e5;  /* Light grey for Event Delegation */
+}
+
+/* Adjust spacing between button and message box */
+section .d-flex {
+    display: flex;
+    align-items: center;
+    gap: 50px;  /* Increased space between button and message box */
+}
+
+/* Center the button and message box vertically and horizontally */
+#mouseButton, #messageBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
