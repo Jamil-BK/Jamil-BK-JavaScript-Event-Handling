@@ -37,6 +37,7 @@ mouseButton.addEventListener('click', function (event) {
     mouseButton.appendChild(ripple);
 
     // Remove ripple after animation ends
+    
     ripple.addEventListener('animationend', () => {
         ripple.remove();
     });
@@ -45,3 +46,17 @@ mouseButton.addEventListener('click', function (event) {
     messageBox.textContent = "Button clicked!";
     messageBox.classList.add("clicked");  // Add clicked class to message box
 });
+
+// Get references to the input field and result divs
+// Keyboard Events Section
+// Keyboard Events Section
+// Get the input and result elements
+const keyboardInput = document.getElementById("keyboardInput");
+const keyPressed = document.getElementById("keyPressed");
+
+// Event listener for any key press
+keyboardInput.addEventListener("keydown", function(event) {
+    // Update the result box with the pressed key
+    keyPressed.textContent = `Last key pressed: ${event.key}`;
+});
+

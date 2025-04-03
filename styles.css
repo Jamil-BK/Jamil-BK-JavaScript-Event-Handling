@@ -213,7 +213,9 @@ section .d-flex {
 }
 
 
-
+/* Overall Key Board section styling */
+/* Overall section styling */
+/* Overall section styling for Keyboard events */
 /* Overall section styling */
 #keyboard-events {
     padding: 0px;
@@ -227,7 +229,7 @@ section .d-flex {
 
 /* Event Title Styling */
 #keyboard-events .bg-dark {
-    background-color:  #66b3ff !important;  /* Deeper shade of the section's background */
+    background-color: #66b3ff !important;  /* Deeper shade of the section's background */
     margin-top: -145px;
     width: 100%;
     padding: 0; /* No padding above */
@@ -245,7 +247,7 @@ section .d-flex {
 #keyboardInput {
     padding: 15px;
     font-size: 1.5rem;
-    width: 250px;
+    width: 300px;
     border-radius: 8px;
     border: 2px solid #0069d9; /* Blue border */
     background-color: #f9f9f9;
@@ -257,60 +259,28 @@ section .d-flex {
     background-color: #e9f7ff; /* Light blue background on focus */
 }
 
-/* Last key pressed message styling */
-#keyPressed {
-    font-size: 1.7rem;
-    margin-top: 20px;
-    font-weight: bold;
-    color: #004085; /* Same deep blue as title */
-}
-
-/* Adjust spacing between input box and message box */
-section .d-flex {
+/* Last Key Pressed Box Styling */
+.keyboard-result {
+    width: 300px;
+    height: 60px;
+    border: 2px solid #0069d9;
     display: flex;
     align-items: center;
-    gap: 50px;  /* Increased space between button and message box */
-}
-
-/* Center the input box and message box vertically and horizontally */
-#keyboardInput, #keyPressed {
-    display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-/* Input Box Styling */
-#keyboardInput {
-    padding: 15px;
-    font-size: 1.5rem;
-    width: 250px;
-    border-radius: 8px;
-    border: 2px solid #0069d9; /* Blue border */
-    background-color: #f9f9f9;
-    transition: background-color 0.3s ease;
-}
-
-/* Input field focus effect */
-#keyboardInput:focus {
-    background-color: #e9f7ff; /* Light blue background on focus */
-}
-
-/* Last key pressed message styling */
-#keyPressed {
-    font-size: 1.7rem;
-    margin-top: 20px;
+    font-size: 1.2rem;
     font-weight: bold;
-    color: #004085; /* Same deep blue as title */
+    color: #004085;
+    background-color: #f9f9f9;
 }
 
-/* Adjust spacing between input box and message box */
+/* Adjust spacing between input box and last key pressed box */
 section .d-flex {
     display: flex;
     align-items: center;
-    gap: 50px;  /* Increased space between button and message box */
+    gap: 50px;  /* Increased space between the input box and the last key pressed box */
 }
 
-/* Center the input box and message box vertically and horizontally */
+/* Center the input box and last key pressed box vertically and horizontally */
 #keyboardInput, #keyPressed {
     display: flex;
     justify-content: center;
