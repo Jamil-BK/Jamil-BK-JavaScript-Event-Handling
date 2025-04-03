@@ -1,40 +1,63 @@
 /* Overall section styling */
-section {
+#mouse-events {
+    padding: 0px;
+    height: 500px;  /* Increased section height by 25% */
+    background-color: #f8d7da; /* Light red background */
+    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 20px;  /* Increased padding for better spacing */
-    min-height: 300px;    /* Increased section height */
-    border-radius: 8px;
-    margin-bottom: 20px;
 }
 
-/* Section title centered */
-h2 {
-    text-align: center;
+/* Event Title Styling */
+#mouse-events .bg-dark {
+    background-color:  #e7a2a2 !important;  /* Deeper shade of the section's background */
+    margin-top: -145px;
     width: 100%;
-    margin-bottom: 20px;
+    padding: 0; /* No padding above */
+}
+
+#mouse-events h2 {
+    margin-bottom: 0;
+    font-family: 'Arial', sans-serif; /* Deep blue font styling */
+    font-weight: bold;
+    font-size: 28px;
+    color: #55091a; /* Deep blue */
 }
 
 /* Button Styling */
 .ripple-btn {
     position: relative;
-    padding: 15px 30px;
-    font-size: 16px;
+    padding: 15px 10px;
+    font-size: 1.2rem;
     cursor: pointer;
-    border-radius: 5px;
-    background-color: #007bff;
+    border-radius: 25px;
+    background-color: #9f4f74;
     color: white;
     border: none;
     outline: none;
     transition: background-color 0.3s;
+    width: 185px; /* 15% bigger */
+    height: 100px;
+    margin-top: 110px;
 }
 
-/* Hover effect on the button */
 .ripple-btn:hover {
-    background-color: #0056b3;
+    background-color: #042a53;
 }
 
+#messageBox {
+    padding: 15px 10px;
+    font-size: 1.7rem;
+    background-color:#e7a2a2 !important; 
+    margin-top: 80px;
+    width: 460px;
+    height: 180px;
+    align-items: center;
+
+}
+
+/* Ripple*
 /* Ripple effect styling */
 .ripple {
     position: absolute;
@@ -51,21 +74,112 @@ h2 {
     }
 }
 
-/* Message Box Styling */
-#messageBox {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    transition: all 0.3s ease-in-out;
-    opacity: 0.9;
-    margin-top: 0;
-    padding: 20px;
-    width: 300px; /* Fixed width for the message box */
-    height: 150px; /* Increased height */
+/* Hover effect on message box */
+#messageBox.hovering {
+    color: #007bff;
+    font-size: 20px;
+    opacity: 1;
+    background-color: #f0f8ff;  /* Light blue background on hover */
+}
+
+/* Message on click effect */
+#messageBox.clicked {
+    color: #830116;
+    font-size: 1.8rem;
+    transform: scale(1.1);
+    background-color: #d4edda;  /* Light green background on click */
+}
+
+/* Adjust spacing between button and message box */
+section .d-flex {
+    display: flex;
+    align-items: center;
+    gap: 50px;  /* Increased space between button and message box */
+}
+
+/* Center the button and message box vertically and horizontally */
+#mouseButton, #messageBox {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+
+/* Overall section styling */
+#mouse-events {
+    padding: 0px;
+    height: 500px;  /* Increased section height by 25% */
+    background-color: #f8d7da; /* Light red background */
     border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Event Title Styling */
+#mouse-events .bg-dark {
+    background-color:  #e7a2a2 !important;  /* Deeper shade of the section's background */
+    margin-top: -145px;
+    width: 100%;
+    padding: 0; /* No padding above */
+}
+
+#mouse-events h2 {
+    margin-bottom: 0;
+    font-family: 'Arial', sans-serif; /* Deep blue font styling */
+    font-weight: bold;
+    font-size: 28px;
+    color: #55091a; /* Deep blue */
+}
+
+/* Button Styling */
+.ripple-btn {
+    position: relative;
+    padding: 15px 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 25px;
+    background-color: #9f4f74;
+    color: white;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+    width: 185px; /* 15% bigger */
+    height: 100px;
+    margin-top: 110px;
+}
+
+.ripple-btn:hover {
+    background-color: #042a53;
+}
+
+#messageBox {
+    padding: 15px 10px;
+    font-size: 1.7rem;
+    background-color:#e7a2a2 !important; 
+    margin-top: 80px;
+    width: 460px;
+    height: 180px;
+    align-items: center;
+
+}
+
+/* Ripple*
+/* Ripple effect styling */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
 }
 
 /* Hover effect on message box */
@@ -78,31 +192,10 @@ h2 {
 
 /* Message on click effect */
 #messageBox.clicked {
-    color: #28a745;
-    font-size: 22px;
+    color: #830116;
+    font-size: 1.8rem;
     transform: scale(1.1);
     background-color: #d4edda;  /* Light green background on click */
-}
-
-/* Section Background Colors for Differentiation */
-.section-bg-1 {
-    background-color: #f8d7da;  /* Light red for Mouse Events */
-}
-
-.section-bg-2 {
-    background-color: #d1ecf1;  /* Light blue for Keyboard Events */
-}
-
-.section-bg-3 {
-    background-color: #c3e6cb;  /* Light green for Form Events */
-}
-
-.section-bg-4 {
-    background-color: #fff3cd;  /* Light yellow for Focus/Blur Events */
-}
-
-.section-bg-5 {
-    background-color: #e2e3e5;  /* Light grey for Event Delegation */
 }
 
 /* Adjust spacing between button and message box */
@@ -114,6 +207,111 @@ section .d-flex {
 
 /* Center the button and message box vertically and horizontally */
 #mouseButton, #messageBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Overall section styling */
+#keyboard-events {
+    padding: 0px;
+    height: 500px;  /* Increased section height by 25% */
+    background-color: #cce5ff; /* Light blue background */
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Event Title Styling */
+#keyboard-events .bg-dark {
+    background-color:  #66b3ff !important;  /* Deeper shade of the section's background */
+    margin-top: -145px;
+    width: 100%;
+    padding: 0; /* No padding above */
+}
+
+#keyboard-events h2 {
+    margin-bottom: 0;
+    font-family: 'Arial', sans-serif; /* Deep blue font styling */
+    font-weight: bold;
+    font-size: 28px;
+    color: #004085; /* Deep blue */
+}
+
+/* Input Box Styling */
+#keyboardInput {
+    padding: 15px;
+    font-size: 1.5rem;
+    width: 250px;
+    border-radius: 8px;
+    border: 2px solid #0069d9; /* Blue border */
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+/* Input field focus effect */
+#keyboardInput:focus {
+    background-color: #e9f7ff; /* Light blue background on focus */
+}
+
+/* Last key pressed message styling */
+#keyPressed {
+    font-size: 1.7rem;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #004085; /* Same deep blue as title */
+}
+
+/* Adjust spacing between input box and message box */
+section .d-flex {
+    display: flex;
+    align-items: center;
+    gap: 50px;  /* Increased space between button and message box */
+}
+
+/* Center the input box and message box vertically and horizontally */
+#keyboardInput, #keyPressed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Input Box Styling */
+#keyboardInput {
+    padding: 15px;
+    font-size: 1.5rem;
+    width: 250px;
+    border-radius: 8px;
+    border: 2px solid #0069d9; /* Blue border */
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+/* Input field focus effect */
+#keyboardInput:focus {
+    background-color: #e9f7ff; /* Light blue background on focus */
+}
+
+/* Last key pressed message styling */
+#keyPressed {
+    font-size: 1.7rem;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #004085; /* Same deep blue as title */
+}
+
+/* Adjust spacing between input box and message box */
+section .d-flex {
+    display: flex;
+    align-items: center;
+    gap: 50px;  /* Increased space between button and message box */
+}
+
+/* Center the input box and message box vertically and horizontally */
+#keyboardInput, #keyPressed {
     display: flex;
     justify-content: center;
     align-items: center;

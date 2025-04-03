@@ -11,28 +11,50 @@
 
     <h1 class="text-center my-4">JavaScript Event Handling</h1>
 
-    <!-- Mouse Events Section -->
 <!-- Mouse Events Section -->
-<section id="mouse-events" class="my-5 section-bg-1 d-flex align-items-center">
-    <h2>Mouse Events</h2>
-    <div class="d-flex">
-        <!-- Button -->
-        <button id="mouseButton" class="btn ripple-btn">Hover or Click Me</button>
-        
-        <!-- Message Box -->
-        <div id="messageBox" class="ml-4 p-3 border rounded bg-light" style="width: 300px;">
-            Hover over the button to see the message change!
+<section id="mouse-events" class="section-bg-1 d-flex justify-content-center align-items-center" style="min-height: 375px;">
+    <div class="w-100">
+        <!-- Event Title -->
+        <div class="bg-dark text-white text-center py-3" style="background-color: #4f9d9f;">
+            <h2 class="mb-0" style="font-family: 'Arial', sans-serif; font-weight: bold;">Mouse Events</h2>
+        </div>
+
+        <!-- Content Area -->
+        <div class="d-flex justify-content-center gap-5 pt-4">
+            <!-- Button -->
+            <button id="mouseButton" class="btn ripple-btn">Hover or Click Me</button>
+            
+            <!-- Message Box -->
+            <div id="messageBox" class="ml-4 p-3 border rounded bg-light">
+                Hover over the button to see the message change!
+            </div>
         </div>
     </div>
 </section>
 
 
-    <!-- Keyboard Events Section -->
-    <section id="keyboard-events" class="my-5 section-bg-2">
-        <h2>Keyboard Events</h2>
-        <input type="text" id="keyboardInput" class="form-control" placeholder="Press any key">
-        <p id="keyPressed">Last key pressed: </p>
-    </section>
+
+
+
+<!-- Keyboard Events Section -->
+<section id="keyboard-events" class="my-5 section-bg-2">
+    <div class="w-100">
+        <!-- Event Title -->
+        <div class="bg-dark text-white text-center py-3" style="background-color: #66b3ff;">
+            <h2 class="mb-0" style="font-family: 'Arial', sans-serif; font-weight: bold; color: #004085;">Keyboard Events</h2>
+        </div>
+
+        <!-- Content Area -->
+        <div class="d-flex justify-content-center gap-5 pt-4">
+            <!-- Input Box -->
+            <input type="text" id="keyboardInput" class="form-control" placeholder="Press any key">
+            
+            <!-- Last Key Pressed Message -->
+            <p id="keyPressed" class="font-weight-bold">Last key pressed: </p>
+        </div>
+    </div>
+</section>
+
 
     <!-- Form Events Section -->
     <section id="form-events" class="my-5 section-bg-3">
