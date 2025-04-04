@@ -1,4 +1,6 @@
+// ===================
 // Mouse Events Section - Ripple Effect and Changing Message
+// ===================
 const mouseButton = document.getElementById('mouseButton');
 const messageBox = document.getElementById('messageBox');
 
@@ -37,7 +39,6 @@ mouseButton.addEventListener('click', function (event) {
     mouseButton.appendChild(ripple);
 
     // Remove ripple after animation ends
-    
     ripple.addEventListener('animationend', () => {
         ripple.remove();
     });
@@ -47,10 +48,9 @@ mouseButton.addEventListener('click', function (event) {
     messageBox.classList.add("clicked");  // Add clicked class to message box
 });
 
-// Get references to the input field and result divs
-// Keyboard Events Section
-// Keyboard Events Section
-// Get the input and result elements
+// ===================
+// Keyboard Events Section - Display last key pressed
+// ===================
 const keyboardInput = document.getElementById("keyboardInput");
 const keyPressed = document.getElementById("keyPressed");
 
@@ -58,5 +58,28 @@ const keyPressed = document.getElementById("keyPressed");
 keyboardInput.addEventListener("keydown", function(event) {
     // Update the result box with the pressed key
     keyPressed.textContent = `Last key pressed: ${event.key}`;
+});
+
+// ===================
+// Form Events Section
+const userForm = document.getElementById('userForm');
+const usernameInput = document.getElementById('username');
+const formMessageBox = document.getElementById('formMessageBox');
+const resetButton = document.getElementById('resetButton');
+
+// Handle form submission
+userForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Stop page from refreshing
+
+    // Show success message and Reset button
+    formMessageBox.style.display = 'block';
+    resetButton.style.display = 'inline-block';
+});
+
+// Handle Reset button click
+resetButton.addEventListener('click', function() {
+    usernameInput.value = '';             // Clear the username input
+    formMessageBox.style.display = 'none'; // Hide the success message
+    resetButton.style.display = 'none';    // Hide the reset button again
 });
 

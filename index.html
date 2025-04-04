@@ -32,8 +32,6 @@
     </div>
 </section>
 
-
-<!-- Keyboard Events Section -->
 <!-- Keyboard Events Section -->
 <!-- Keyboard Events Section -->
 <section id="keyboard-events" class="section-bg-2 d-flex justify-content-center align-items-center">
@@ -54,22 +52,37 @@
     </div>
 </section>
 
+<!-- Form Events Section -->
+<!-- Form Events Section -->
+<section id="form-events" class="section-bg-3 d-flex justify-content-center align-items-center" style="min-height: 500px;">
+    <div class="w-100">
+        <!-- Event Title -->
+        <div class="bg-dark text-white text-center py-3" style="background-color: #98c9f5;">
+            <h2 class="mb-0" style="font-family: 'Arial', sans-serif; font-weight: bold; color: #004085;">Form Events</h2>
+        </div>
+
+        <!-- Content Area -->
+        <div class="d-flex justify-content-center gap-5 pt-4">
+            <!-- Form -->
+            <form id="userForm" class="w-50">
+                <label for="username" class="form-label">Username:</label>
+                <input type="text" id="username" class="form-control" placeholder="Enter your username" required>
+
+                <div class="mt-3 d-flex gap-3">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" id="resetButton" class="btn btn-secondary" style="display: none;">Reset</button>
+                </div>
+            </form>
+
+            <!-- Message Box -->
+            <div id="formMessageBox" class="p-3 border rounded bg-light" style="width: 350px; display: none;">
+                Form submitted successfully!
+            </div>
+        </div>
+    </div>
+</section>
 
 
-
-
-
-
-
-    <!-- Form Events Section -->
-    <section id="form-events" class="my-5 section-bg-3">
-        <h2>Form Events</h2>
-        <form id="myForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Enter your username">
-            <button type="submit" class="btn btn-secondary">Submit</button>
-        </form>
-    </section>
 
     <!-- Focus and Blur Events Section -->
     <section id="focus-blur-events" class="my-5 section-bg-4">

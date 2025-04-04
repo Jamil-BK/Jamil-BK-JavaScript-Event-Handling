@@ -1,31 +1,26 @@
-/* Overall section styling */
+/* ====== Mouse Events Section ====== */
 #mouse-events {
     padding: 0px;
-    height: 500px;  /* Increased section height by 25% */
-    background-color: #f8d7da; /* Light red background */
+    height: 500px;
+    background-color: #f8d7da;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-/* Event Title Styling */
 #mouse-events .bg-dark {
-    background-color:  #e7a2a2 !important;  /* Deeper shade of the section's background */
+    background-color: #e7a2a2 !important;
     margin-top: -145px;
     width: 100%;
-    padding: 0; /* No padding above */
+    padding: 0;
 }
-
 #mouse-events h2 {
     margin-bottom: 0;
-    font-family: 'Arial', sans-serif; /* Deep blue font styling */
+    font-family: 'Arial', sans-serif;
     font-weight: bold;
     font-size: 28px;
-    color: #55091a; /* Deep blue */
+    color: #55091a;
 }
-
-/* Button Styling */
 .ripple-btn {
     position: relative;
     padding: 15px 10px;
@@ -37,28 +32,22 @@
     border: none;
     outline: none;
     transition: background-color 0.3s;
-    width: 185px; /* 15% bigger */
+    width: 185px;
     height: 100px;
     margin-top: 110px;
 }
-
 .ripple-btn:hover {
     background-color: #042a53;
 }
-
 #messageBox {
     padding: 15px 10px;
     font-size: 1.7rem;
-    background-color:#e7a2a2 !important; 
+    background-color: #e7a2a2 !important;
     margin-top: 80px;
     width: 460px;
     height: 180px;
     align-items: center;
-
 }
-
-/* Ripple*
-/* Ripple effect styling */
 .ripple {
     position: absolute;
     border-radius: 50%;
@@ -66,223 +55,185 @@
     transform: scale(0);
     animation: ripple-animation 0.6s linear;
 }
-
 @keyframes ripple-animation {
     to {
         transform: scale(4);
         opacity: 0;
     }
 }
-
-/* Hover effect on message box */
 #messageBox.hovering {
     color: #007bff;
     font-size: 20px;
     opacity: 1;
-    background-color: #f0f8ff;  /* Light blue background on hover */
+    background-color: #f0f8ff;
 }
-
-/* Message on click effect */
 #messageBox.clicked {
     color: #830116;
     font-size: 1.8rem;
     transform: scale(1.1);
-    background-color: #d4edda;  /* Light green background on click */
+    background-color: #d4edda;
 }
 
 /* Adjust spacing between button and message box */
 section .d-flex {
     display: flex;
     align-items: center;
-    gap: 50px;  /* Increased space between button and message box */
+    gap: 50px;
 }
-
-/* Center the button and message box vertically and horizontally */
 #mouseButton, #messageBox {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
-
-/* Overall section styling */
-#mouse-events {
-    padding: 0px;
-    height: 500px;  /* Increased section height by 25% */
-    background-color: #f8d7da; /* Light red background */
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Event Title Styling */
-#mouse-events .bg-dark {
-    background-color:  #e7a2a2 !important;  /* Deeper shade of the section's background */
-    margin-top: -145px;
-    width: 100%;
-    padding: 0; /* No padding above */
-}
-
-#mouse-events h2 {
-    margin-bottom: 0;
-    font-family: 'Arial', sans-serif; /* Deep blue font styling */
-    font-weight: bold;
-    font-size: 28px;
-    color: #55091a; /* Deep blue */
-}
-
-/* Button Styling */
-.ripple-btn {
-    position: relative;
-    padding: 15px 10px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 25px;
-    background-color: #9f4f74;
-    color: white;
-    border: none;
-    outline: none;
-    transition: background-color 0.3s;
-    width: 185px; /* 15% bigger */
-    height: 100px;
-    margin-top: 110px;
-}
-
-.ripple-btn:hover {
-    background-color: #042a53;
-}
-
-#messageBox {
-    padding: 15px 10px;
-    font-size: 1.7rem;
-    background-color:#e7a2a2 !important; 
-    margin-top: 80px;
-    width: 460px;
-    height: 180px;
-    align-items: center;
-
-}
-
-/* Ripple*
-/* Ripple effect styling */
-.ripple {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.6);
-    transform: scale(0);
-    animation: ripple-animation 0.6s linear;
-}
-
-@keyframes ripple-animation {
-    to {
-        transform: scale(4);
-        opacity: 0;
-    }
-}
-
-/* Hover effect on message box */
-#messageBox.hovering {
-    color: #007bff;
-    font-size: 20px;
-    opacity: 1;
-    background-color: #f0f8ff;  /* Light blue background on hover */
-}
-
-/* Message on click effect */
-#messageBox.clicked {
-    color: #830116;
-    font-size: 1.8rem;
-    transform: scale(1.1);
-    background-color: #d4edda;  /* Light green background on click */
-}
-
-/* Adjust spacing between button and message box */
-section .d-flex {
-    display: flex;
-    align-items: center;
-    gap: 50px;  /* Increased space between button and message box */
-}
-
-/* Center the button and message box vertically and horizontally */
-#mouseButton, #messageBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-/* Overall Key Board section styling */
-/* Overall section styling */
-/* Overall section styling for Keyboard events */
-/* Overall section styling */
+/* ====== Keyboard Events Section ====== */
 #keyboard-events {
     padding: 0px;
-    height: 500px;  /* Increased section height by 25% */
-    background-color: #cce5ff; /* Light blue background */
+    height: 500px;
+    background-color: #cce5ff;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-/* Event Title Styling */
 #keyboard-events .bg-dark {
-    background-color: #66b3ff !important;  /* Deeper shade of the section's background */
-    margin-top: -145px;
+    background-color: #66b3ff !important;
+    margin-top: -245px;
     width: 100%;
-    padding: 0; /* No padding above */
+    padding: 0;
+    padding-top: 5%;
 }
-
 #keyboard-events h2 {
     margin-bottom: 0;
-    font-family: 'Arial', sans-serif; /* Deep blue font styling */
+    font-family: 'Arial', sans-serif;
     font-weight: bold;
     font-size: 28px;
-    color: #004085; /* Deep blue */
+    color: #004085;
 }
-
-/* Input Box Styling */
 #keyboardInput {
     padding: 15px;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     width: 300px;
     border-radius: 8px;
-    border: 2px solid #0069d9; /* Blue border */
+    height: 120px;
+    border: 2px solid #0069d9;
     background-color: #f9f9f9;
     transition: background-color 0.3s ease;
 }
-
-/* Input field focus effect */
 #keyboardInput:focus {
-    background-color: #e9f7ff; /* Light blue background on focus */
+    background-color: #e9f7ff;
 }
-
-/* Last Key Pressed Box Styling */
 .keyboard-result {
-    width: 300px;
-    height: 60px;
+    width: 350px;
+    height: 120px;
     border: 2px solid #0069d9;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     font-weight: bold;
+    padding-left: 15px;
     color: #004085;
     background-color: #f9f9f9;
 }
-
-/* Adjust spacing between input box and last key pressed box */
-section .d-flex {
-    display: flex;
-    align-items: center;
-    gap: 50px;  /* Increased space between the input box and the last key pressed box */
-}
-
-/* Center the input box and last key pressed box vertically and horizontally */
 #keyboardInput, #keyPressed {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* ====== Form Events Section (NEW) ====== */
+#form-events {
+    padding: 0px;
+    height: 500px;
+    background-color: #e6f7ff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#form-events .bg-dark {
+    background-color: #99ccff !important;
+    margin-top: -145px;
+    width: 100%;
+    padding: 0;
+}
+#form-events h2 {
+    margin-bottom: 0;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    color: #004085;
+}
+
+/* Form Styling */
+#userForm {
+    width: 400px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #99ccff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input Box Styling */
+#username {
+    padding: 12px;
+    width: 100%;
+    font-size: 1.3rem;
+    border-radius: 8px;
+    border: 2px solid #3399ff;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+}
+
+/* Submit and Reset Buttons Styling */
+#userForm button, #resetButton {
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: none;
+    background-color: #3399ff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#userForm button:hover, #resetButton:hover {
+    background-color: #2672cc;
+}
+
+/* Message Box Styling */
+#submissionMessage {
+    padding: 20px;
+    width: 400px;
+    height: 100px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #004085;
+    background-color: #d6efff;
+    border: 2px solid #3399ff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Content Layout */
+#formContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+/* Hide reset button initially */
+#resetButton {
+    display: none;
+}
+
+/* =================== END =================== */
