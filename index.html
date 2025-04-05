@@ -85,20 +85,26 @@
 
 
     <!-- Focus and Blur Events Section -->
-    <section id="focus-blur-events" class="my-5 section-bg-4">
-        <h2>Focus and Blur Events</h2>
-        <input type="text" id="focusBlurInput" class="form-control" placeholder="Focus or blur this input">
-    </section>
-
-    <!-- Event Delegation Section -->
-    <section id="event-delegation" class="my-5 section-bg-5">
-        <h2>Event Delegation</h2>
-        <div id="buttonContainer">
-            <button class="delegatedButton btn btn-info">Button 1</button>
-            <button class="delegatedButton btn btn-info">Button 2</button>
-            <button class="delegatedButton btn btn-info">Button 3</button>
+<!-- Focus and Blur Events Section -->
+<section id="focus-blur-events" class="section-bg-4 d-flex justify-content-center align-items-center">
+    <div class="w-100">
+        <!-- Event Title -->
+        <div class="bg-dark text-white text-center py-3">
+            <h2 class="mb-0">Focus and Blur Events</h2>
         </div>
-    </section>
+
+        <!-- Content Area -->
+        <div class="d-flex justify-content-center gap-5 pt-4">
+            <!-- Input Field -->
+            <input type="text" id="focusInput" class="form-control" placeholder="Click here to focus">
+
+            <!-- Message Box -->
+            <div id="focusMessage" class="focus-blur-result">
+                Input is inactive.
+            </div>
+        </div>
+    </div>
+</section>
 
     <script src="script.js"></script>
 </body>

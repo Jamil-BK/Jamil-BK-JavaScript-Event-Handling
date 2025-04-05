@@ -1,21 +1,28 @@
-// ===================
 // Mouse Events Section - Ripple Effect and Changing Message
-// ===================
 const mouseButton = document.getElementById('mouseButton');
 const messageBox = document.getElementById('messageBox');
 
 // Hover event - change button color and message
 mouseButton.addEventListener('mouseover', function () {
+    // Reset classes first
+    messageBox.classList.remove("clicked");
+    messageBox.classList.remove("hovering");
+
+    // Then add hover class
     messageBox.textContent = "You are hovering over the button!";
-    messageBox.classList.add("hovering");  // Add hover class to message box
-    mouseButton.style.backgroundColor = 'lightblue';  // Change button color on hover
+    messageBox.classList.add("hovering");  
+    mouseButton.style.backgroundColor = 'lightblue';  
 });
 
-// Mouse leave event - reset button color and change message
+// Mouse leave event - reset button color and message
 mouseButton.addEventListener('mouseout', function () {
-    messageBox.textContent = "You left the button!";
+    // Reset classes first
+    messageBox.classList.remove("clicked");
     messageBox.classList.remove("hovering");
-    mouseButton.style.backgroundColor = '';  // Reset button color when mouse leaves
+
+    // No hover/click class now
+    messageBox.textContent = "You left the button!";
+    mouseButton.style.backgroundColor = '';  
 });
 
 // Click event - add ripple effect and change message
@@ -24,29 +31,30 @@ mouseButton.addEventListener('click', function (event) {
     const ripple = document.createElement('span');
     ripple.classList.add('ripple');
 
-    // Get button dimensions and position
     const rect = mouseButton.getBoundingClientRect();
     const size = Math.max(rect.width, rect.height);
     const x = event.clientX - rect.left - size / 2;
     const y = event.clientY - rect.top - size / 2;
 
-    // Set ripple size and position
     ripple.style.width = ripple.style.height = `${size}px`;
     ripple.style.left = `${x}px`;
     ripple.style.top = `${y}px`;
 
-    // Append ripple to the button
     mouseButton.appendChild(ripple);
 
-    // Remove ripple after animation ends
     ripple.addEventListener('animationend', () => {
         ripple.remove();
     });
 
-    // Change message on click
+    // Reset hover class
+    messageBox.classList.remove("hovering");
+    messageBox.classList.remove("clicked");
+
+    // Add clicked class
     messageBox.textContent = "Button clicked!";
-    messageBox.classList.add("clicked");  // Add clicked class to message box
+    messageBox.classList.add("clicked");
 });
+
 
 // ===================
 // Keyboard Events Section - Display last key pressed
@@ -81,5 +89,28 @@ resetButton.addEventListener('click', function() {
     usernameInput.value = '';             // Clear the username input
     formMessageBox.style.display = 'none'; // Hide the success message
     resetButton.style.display = 'none';    // Hide the reset button again
+});
+
+
+// Focus and Blur Events Section
+// Focus and Blur Events Section
+// Focus and Blur Events Section
+const focusInput = document.getElementById('focusInput');
+const focusMessage = document.getElementById('focusMessage');
+
+// When input gains focus
+focusInput.addEventListener('focus', function () {
+    focusMessage.textContent = "Input is active!";
+    focusMessage.style.color = "#8B0000"; // Deep Red
+    focusMessage.style.fontSize = "2.3rem"; // Bigger font
+    focusMessage.style.backgroundColor = "#e0f7fa"; // Light background
+});
+
+// When input loses focus
+focusInput.addEventListener('blur', function () {
+    focusMessage.textContent = "Input is inactive.";
+    focusMessage.style.color = "#004085"; // Deep Blue
+    focusMessage.style.fontSize = "1.8rem"; // Reset to original smaller font
+    focusMessage.style.backgroundColor = "#f9f9f9"; // Default background
 });
 
