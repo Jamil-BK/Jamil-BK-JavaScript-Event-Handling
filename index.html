@@ -11,6 +11,21 @@
 
     <h1 class="text-center my-4">JavaScript Event Handling</h1>
 
+<!-- Header Image -->
+<div class="text-center">
+    <img src="header.png" alt="Header Image" class="img-fluid header-image" style="width: 100%; height: auto;">
+</div>
+
+<!-- Navigation Buttons -->
+<div class="nav-buttons">
+    <a href="#mouse-events" class="nav-btn">Mouse Events</a>
+    <a href="#keyboard-events" class="nav-btn">Keyboard Events</a>
+    <a href="#form-events" class="nav-btn">Form Events</a>
+    <a href="#focus-blur-events" class="nav-btn">Focus/Blur Events</a>
+    <a href="#event-delegation" class="nav-btn">Event Delegation</a>
+</div>
+
+
 <!-- Mouse Events Section -->
 <section id="mouse-events" class="section-bg-1 d-flex justify-content-center align-items-center" style="min-height: 375px;">
     <div class="w-100">
@@ -106,6 +121,37 @@
     </div>
 </section>
 
-    <script src="script.js"></script>
+
+<!-- Event Delegation Section -->
+<section id="event-delegation" class="section-bg-5">
+    <div class="bg-dark text-white text-center py-3">
+        <h2 class="mb-0">Event Delegation</h2>
+    </div>
+
+    <!-- New container to center everything -->
+    <div class="content-area">
+        <!-- Province Buttons -->
+        <div id="provinceButtons">
+            <button class="delegatedButton">Ontario</button>
+            <button class="delegatedButton">Quebec</button>
+            <button class="delegatedButton">British Columbia</button>
+        </div>
+
+        <!-- Province Info Box -->
+        <div id="provinceInfo">
+            Click on a province to see more information!
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+      <p class="mb-0">© 2025 Event Handling Lab. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -101,7 +101,7 @@ const focusMessage = document.getElementById('focusMessage');
 // When input gains focus
 focusInput.addEventListener('focus', function () {
     focusMessage.textContent = "Input is active!";
-    focusMessage.style.color = "#8B0000"; // Deep Red
+    focusMessage.style.color = "#9e0909"; // Deep Red
     focusMessage.style.fontSize = "2.3rem"; // Bigger font
     focusMessage.style.backgroundColor = "#e0f7fa"; // Light background
 });
@@ -112,5 +112,48 @@ focusInput.addEventListener('blur', function () {
     focusMessage.style.color = "#004085"; // Deep Blue
     focusMessage.style.fontSize = "1.8rem"; // Reset to original smaller font
     focusMessage.style.backgroundColor = "#f9f9f9"; // Default background
+});
+
+// =============================
+// Event Delegation for Province Buttons
+// Event Delegation for Province Buttons
+// Event Delegation Section - Province Info
+const buttonContainer = document.getElementById('provinceButtons');
+const provinceInfo = document.getElementById('provinceInfo');
+
+// Messages for each province
+const provinceMessages = {
+    "Ontario": "Ontario is Canada's most populous province, home to Toronto and Ottawa.",
+    "Quebec": "Quebec is known for its French heritage, with Montreal and Quebec City as major centers.",
+    "British Columbia": "British Columbia features Vancouver and stunning natural landscapes like the Rockies."
+};
+
+// Background colors for each province
+const provinceColors = {
+    "Ontario": "#007bff",          // Blue
+    "Quebec": "#28a745",           // Green
+    "British Columbia": "#ff9900"  // Orange
+};
+
+// Add event listener to the container (Event Delegation)
+buttonContainer.addEventListener('click', function(event) {
+    if (event.target.classList.contains('delegatedButton')) {
+
+        // Remove 'active' class from all buttons
+        const buttons = buttonContainer.querySelectorAll('.delegatedButton');
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        // Add 'active' class to the clicked button
+        event.target.classList.add('active');
+
+        // Get the province name
+        const provinceName = event.target.textContent.trim();
+
+        // Update the message
+        provinceInfo.textContent = provinceMessages[provinceName] || "No information available.";
+
+        // Change the background color of the info box
+        provinceInfo.style.backgroundColor = provinceColors[provinceName] || "#f8f9fa"; // Default fallback
+    }
 });
 

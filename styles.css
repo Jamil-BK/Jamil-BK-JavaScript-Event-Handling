@@ -1,3 +1,41 @@
+
+/* Header Image Styling */
+.header-image img {
+    width: 100%;
+    height: auto;
+}
+
+
+.nav-buttons {
+    text-align: center;
+    background-color: #06284b; 
+    padding: 10px 0;
+    margin: 10px 0; 
+    position: sticky;
+    top: 0;
+    z-index: 999; 
+}
+
+.nav-btn {
+    text-decoration: none;
+    color: #c5cf3b; 
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 025px;
+    transition: color 0.5ease;
+}
+
+.nav-btn:hover {
+    color: #ce5a6f; 
+    text-decoration: underline;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Adjust according to navbar height */
+  }
+
+
 /* ====== Mouse Events Section ====== */
 #mouse-events {
     padding: 0px;
@@ -74,7 +112,6 @@
     background-color: #d4edda;
 }
 
-/* Adjust spacing between button and message box */
 section .d-flex {
     display: flex;
     align-items: center;
@@ -142,23 +179,21 @@ section .d-flex {
     align-items: center;
 }
 
-/* ====== Form Events Section (NEW) ====== */
 /* ====================== FORM EVENTS ==================== */
 
 /* Form Events Section Styling */
 #form-events {
     padding: 0px;
-    height: 500px;  /* Same height for consistency */
-    background-color: #f1ceef; /* Very Light Blue-White Background */
+    height: 500px;  
+    background-color: #f1ceef; 
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Form Events Title Bar Styling */
 #form-events .bg-dark {
-    background-color: #f078dc !important; /* Different Soft Blue for Title Bar */
+    background-color: #f078dc !important; 
     margin-top: -145px;
     width: 100%;
     padding: 0;
@@ -169,12 +204,12 @@ section .d-flex {
     font-family: 'Arial', sans-serif;
     font-weight: bold;
     font-size: 28px;
-    color: #004085; /* Dark Blue Font */
+    color: #004085; 
 }
 
 /* Form and Input Box Styling */
 #userForm {
-    background-color: #f0b6e6; /* White form background */
+    background-color: #f0b6e6; 
     padding: 20px;
     border: 2px solid #b354eb;
     border-radius: 10px;
@@ -223,7 +258,7 @@ section .d-flex {
 
 /* Hide Reset button initially */
 #resetButton {
-    display: none; /* Hidden initially */
+    display: none; 
 }
 
 /* Gap between form and message box */
@@ -235,10 +270,9 @@ section .d-flex {
 }
 
 
-/* =================== Focun And Blur=================== */
-/* ====================== FOCUS & BLUR EVENTS ==================== */
+/* =================== Focun And Blur========================= */
+/* ================== FOCUS & BLUR EVENTS ==================== */
 
-/* Overall Focus-Blur Section Styling */
 #focus-blur-events {
     padding: 0;
     height: 500px;
@@ -251,7 +285,7 @@ section .d-flex {
 
 /* Title Bar Styling */
 #focus-blur-events .bg-dark {
-    background-color: #70c9d0 !important; /* Deeper cyan shade */
+    background-color: #70c9d0 !important; 
     margin-top: -240px;
     width: 100%;
     padding: 0;
@@ -272,7 +306,7 @@ section .d-flex {
     width: 300px;
     border-radius: 8px;
     height: 120px;
-    border: 2px solid #17a2b8; /* Cyan border */
+    border: 2px solid #17a2b8; 
     background-color: #f9f9f9;
     transition: all 0.3s ease;
 }
@@ -297,4 +331,109 @@ section .d-flex {
     color: #004d5b;
     background-color: #f9f9f9;
     transition: all 0.3s ease;
+}
+
+
+/* ====================== EVENT DELEGATION SECTION ==================== */
+
+/* Event Delegation Section Styling */
+#event-delegation {
+    padding: 0;
+    height: 500px; /* Match other sections */
+    background-color: #f8c2d0; /* Light pink background */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Event Title Styling */
+#event-delegation .bg-dark {
+    background-color: #f080a1 !important; /* Deeper shade of pink */
+    margin-top: -145px;
+    width: 100%;
+    padding: 0;
+}
+
+#event-delegation h2 {
+    margin-bottom: 0;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    color: #721c24;
+}
+
+/* Content Area  */
+#event-delegation .content-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+    margin-top: 40px;
+}
+
+/* Province Buttons Container */
+#provinceButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+/* Individual Province Buttons */
+.delegatedButton {
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid #444;
+    border-radius: 20px;
+    background-color: white;
+    transition: all 0.3s ease;
+    min-width: 180px;
+}
+
+/* Unique Button Colors */
+.delegatedButton:nth-child(1) {
+    color: #007bff; 
+}
+
+.delegatedButton:nth-child(2) {
+    color: #28a745; 
+}
+
+.delegatedButton:nth-child(3) {
+    color: #ff9900;
+}
+
+/* Button Hover Effect */
+.delegatedButton:hover {
+    background-color: #ffe6f0;
+    transform: scale(1.05);
+}
+
+/* Glow effect on active button */
+.delegatedButton.active {
+    box-shadow: 0 0 10px 3px rgba(255, 0, 150, 0.7); 
+}
+
+/* Province Info Box */
+#provinceInfo {
+    padding: 20px;
+    width: 400px;
+    min-height: 180px;
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #721c24; 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer Styling */
+footer {
+    font-size: 1rem;
 }
