@@ -1,26 +1,24 @@
-// Mouse Events Section - Ripple Effect and Changing Message
+// Mouse Events Section
 const mouseButton = document.getElementById('mouseButton');
 const messageBox = document.getElementById('messageBox');
 
 // Hover event - change button color and message
 mouseButton.addEventListener('mouseover', function () {
-    // Reset classes first
     messageBox.classList.remove("clicked");
     messageBox.classList.remove("hovering");
 
-    // Then add hover class
+    // add hover class
     messageBox.textContent = "You are hovering over the button!";
     messageBox.classList.add("hovering");  
     mouseButton.style.backgroundColor = 'lightblue';  
 });
 
-// Mouse leave event - reset button color and message
+// Mouse leave event
 mouseButton.addEventListener('mouseout', function () {
-    // Reset classes first
+    // Reset class first
     messageBox.classList.remove("clicked");
     messageBox.classList.remove("hovering");
 
-    // No hover/click class now
     messageBox.textContent = "You left the button!";
     mouseButton.style.backgroundColor = '';  
 });
@@ -57,7 +55,7 @@ mouseButton.addEventListener('click', function (event) {
 
 
 // ===================
-// Keyboard Events Section - Display last key pressed
+// Keyboard Events Section
 // ===================
 const keyboardInput = document.getElementById("keyboardInput");
 const keyPressed = document.getElementById("keyPressed");
@@ -77,7 +75,7 @@ const resetButton = document.getElementById('resetButton');
 
 // Handle form submission
 userForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Stop page from refreshing
+    event.preventDefault(); 
 
     // Show success message and Reset button
     formMessageBox.style.display = 'block';
@@ -86,14 +84,12 @@ userForm.addEventListener('submit', function(event) {
 
 // Handle Reset button click
 resetButton.addEventListener('click', function() {
-    usernameInput.value = '';             // Clear the username input
-    formMessageBox.style.display = 'none'; // Hide the success message
-    resetButton.style.display = 'none';    // Hide the reset button again
+    usernameInput.value = '';         
+    formMessageBox.style.display = 'none'; 
+    resetButton.style.display = 'none';    
 });
 
 
-// Focus and Blur Events Section
-// Focus and Blur Events Section
 // Focus and Blur Events Section
 const focusInput = document.getElementById('focusInput');
 const focusMessage = document.getElementById('focusMessage');
@@ -101,22 +97,20 @@ const focusMessage = document.getElementById('focusMessage');
 // When input gains focus
 focusInput.addEventListener('focus', function () {
     focusMessage.textContent = "Input is active!";
-    focusMessage.style.color = "#9e0909"; // Deep Red
-    focusMessage.style.fontSize = "2.3rem"; // Bigger font
-    focusMessage.style.backgroundColor = "#e0f7fa"; // Light background
+    focusMessage.style.color = "#9e0909"; 
+    focusMessage.style.fontSize = "2.3rem"; 
+    focusMessage.style.backgroundColor = "#e0f7fa"; 
 });
 
 // When input loses focus
 focusInput.addEventListener('blur', function () {
     focusMessage.textContent = "Input is inactive.";
-    focusMessage.style.color = "#004085"; // Deep Blue
-    focusMessage.style.fontSize = "1.8rem"; // Reset to original smaller font
-    focusMessage.style.backgroundColor = "#f9f9f9"; // Default background
+    focusMessage.style.color = "#004085"; 
+    focusMessage.style.fontSize = "1.8rem"; 
+    focusMessage.style.backgroundColor = "#f9f9f9"; 
 });
 
 // =============================
-// Event Delegation for Province Buttons
-// Event Delegation for Province Buttons
 // Event Delegation Section - Province Info
 const buttonContainer = document.getElementById('provinceButtons');
 const provinceInfo = document.getElementById('provinceInfo');
@@ -130,9 +124,9 @@ const provinceMessages = {
 
 // Background colors for each province
 const provinceColors = {
-    "Ontario": "#007bff",          // Blue
-    "Quebec": "#28a745",           // Green
-    "British Columbia": "#ff9900"  // Orange
+    "Ontario": "#007bff",        
+    "Quebec": "#28a745",           
+    "British Columbia": "#ff9900"  
 };
 
 // Add event listener to the container (Event Delegation)
@@ -143,16 +137,16 @@ buttonContainer.addEventListener('click', function(event) {
         const buttons = buttonContainer.querySelectorAll('.delegatedButton');
         buttons.forEach(btn => btn.classList.remove('active'));
 
-        // Add 'active' class to the clicked button
+        // Add 'active' class to clicked button
         event.target.classList.add('active');
 
-        // Get the province name
+        // Get the provinc name
         const provinceName = event.target.textContent.trim();
 
         // Update the message
         provinceInfo.textContent = provinceMessages[provinceName] || "No information available.";
 
-        // Change the background color of the info box
+        // Change the background color of th box
         provinceInfo.style.backgroundColor = provinceColors[provinceName] || "#f8f9fa"; // Default fallback
     }
 });
