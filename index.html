@@ -1,133 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Event Handling</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="container">
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="container">
     <h1 class="text-center my-4">JavaScript Event Handling</h1>
 
-<!-- Header Image -->
-<div class="text-center">
-    <img src="header.png" alt="Header Image" class="img-fluid header-image" style="width: 100%; height: auto;">
-</div>
+    <!-- Header Image -->
+    <div class="text-center">
+      <img
+        src="header.png"
+        alt="Header Image"
+        class="img-fluid header-image"
+        style="width: 100%; height: auto"
+      />
+    </div>
 
-<!-- Navigation Buttons -->
-<div class="nav-buttons">
-    <a href="#mouse-events" class="nav-btn">Mouse Events</a>
-    <a href="#keyboard-events" class="nav-btn">Keyboard Events</a>
-    <a href="#form-events" class="nav-btn">Form Events</a>
-    <a href="#focus-blur-events" class="nav-btn">Focus/Blur Events</a>
-    <a href="#event-delegation" class="nav-btn">Event Delegation</a>
-</div>
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+      <a href="#mouse-events" class="nav-btn">Mouse Events</a>
+      <a href="#keyboard-events" class="nav-btn">Keyboard Events</a>
+      <a href="#form-events" class="nav-btn">Form Events</a>
+      <a href="#focus-blur-events" class="nav-btn">Focus/Blur Events</a>
+      <a href="#event-delegation" class="nav-btn">Event Delegation</a>
+    </div>
 
-
-<!-- Mouse Events Section -->
-<section id="mouse-events" class="section-bg-1 d-flex justify-content-center align-items-center" style="min-height: 375px;">
-    <div class="w-100">
+    <!-- Mouse Events Section -->
+    <section
+      id="mouse-events"
+      class="section-bg-1 d-flex justify-content-center align-items-center"
+      style="min-height: 375px"
+    >
+      <div class="w-100">
         <!-- Event Title -->
-        <div class="bg-dark text-white text-center py-3" style="background-color: #4f9d9f;">
-            <h2 class="mb-0" style="font-family: 'Arial', sans-serif; font-weight: bold;">Mouse Events</h2>
+        <div
+          class="bg-dark text-white text-center py-3"
+          style="background-color: #4f9d9f"
+        >
+          <h2
+            class="mb-0"
+            style="font-family: 'Arial', sans-serif; font-weight: bold"
+          >
+            Mouse Events
+          </h2>
         </div>
 
         <div class="d-flex justify-content-center gap-5 pt-4">
-            <button id="mouseButton" class="btn ripple-btn">Hover or Click Me</button>
-            <div id="messageBox" class="ml-4 p-3 border rounded bg-light">
-                Hover over the button to see the message change!
-            </div>
+          <button id="mouseButton" class="btn ripple-btn">
+            Hover or Click Me
+          </button>
+          <div id="messageBox" class="ml-4 p-3 border rounded bg-light">
+            Hover over the button to see the message change!
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Keyboard Events Section -->
-<section id="keyboard-events" class="section-bg-2 d-flex justify-content-center align-items-center">
-    <div class="w-100">
+    <!-- Keyboard Events Section -->
+    <section
+      id="keyboard-events"
+      class="section-bg-2 d-flex justify-content-center align-items-center"
+    >
+      <div class="w-100">
         <div class="bg-dark text-white text-center py-3">
-            <h2 class="mb-0">Keyboard Events</h2>
+          <h2 class="mb-0">Keyboard Events</h2>
         </div>
 
         <div class="d-flex justify-content-center gap-5 pt-4">
-            <input type="text" id="keyboardInput" class="form-control" placeholder="Press any key">
+          <input
+            type="text"
+            id="keyboardInput"
+            class="form-control"
+            placeholder="Press any key"
+          />
 
-            <div id="keyPressed" class="keyboard-result">Last key pressed: </div>
+          <div id="keyPressed" class="keyboard-result">Last key pressed:</div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Form Events Section -->
-<section id="form-events" class="section-bg-3 d-flex justify-content-center align-items-center" style="min-height: 500px;">
-    <div class="w-100">
-        <div class="bg-dark text-white text-center py-3" style="background-color: #98c9f5;">
-            <h2 class="mb-0" style="font-family: 'Arial', sans-serif; font-weight: bold; color: #004085;">Form Events</h2>
+    <!-- Form Events Section -->
+    <section
+      id="form-events"
+      class="section-bg-3 d-flex justify-content-center align-items-center"
+      style="min-height: 500px"
+    >
+      <div class="w-100">
+        <div
+          class="bg-dark text-white text-center py-3"
+          style="background-color: #98c9f5"
+        >
+          <h2
+            class="mb-0"
+            style="
+              font-family: 'Arial', sans-serif;
+              font-weight: bold;
+              color: #004085;
+            "
+          >
+            Form Events
+          </h2>
         </div>
 
         <div class="d-flex justify-content-center gap-5 pt-4">
-            <form id="userForm" class="w-50">
-                <label for="username" class="form-label">Username:</label>
-                <input type="text" id="username" class="form-control" placeholder="Enter your username" required>
+          <form id="userForm" class="w-50">
+            <label for="username" class="form-label">Username:</label>
+            <input
+              type="text"
+              id="username"
+              class="form-control"
+              placeholder="Enter your username"
+              required
+            />
 
-                <div class="mt-3 d-flex gap-3">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <button type="button" id="resetButton" class="btn btn-secondary" style="display: none;">Reset</button>
-                </div>
-            </form>
-
-            <!-- Message Box -->
-            <div id="formMessageBox" class="p-3 border rounded bg-light" style="width: 350px; display: none;">
-                Form submitted successfully!
+            <div class="mt-3 d-flex gap-3">
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button
+                type="button"
+                id="resetButton"
+                class="btn btn-secondary"
+                style="display: none"
+              >
+                Reset
+              </button>
             </div>
+          </form>
+
+          <!-- Message Box -->
+          <div
+            id="formMessageBox"
+            class="p-3 border rounded bg-light"
+            style="width: 350px; display: none"
+          >
+            Form submitted successfully!
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-
-
-<!-- Focus and Blur Events Section -->
-<section id="focus-blur-events" class="section-bg-4 d-flex justify-content-center align-items-center">
-    <div class="w-100">
+    <!-- Focus and Blur Events Section -->
+    <section
+      id="focus-blur-events"
+      class="section-bg-4 d-flex justify-content-center align-items-center"
+    >
+      <div class="w-100">
         <!-- Event Title -->
         <div class="bg-dark text-white text-center py-3">
-            <h2 class="mb-0">Focus and Blur Events</h2>
+          <h2 class="mb-0">Focus and Blur Events</h2>
         </div>
         <div class="d-flex justify-content-center gap-5 pt-4">
-            <input type="text" id="focusInput" class="form-control" placeholder="Click here to focus">
-            <div id="focusMessage" class="focus-blur-result">
-                Input is inactive.
-            </div>
+          <input
+            type="text"
+            id="focusInput"
+            class="form-control"
+            placeholder="Click here to focus"
+          />
+          <div id="focusMessage" class="focus-blur-result">
+            Input is inactive.
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-
-<!-- Event Delegation Section -->
-<section id="event-delegation" class="section-bg-5">
-    <div class="bg-dark text-white text-center py-3">
+    <!-- Event Delegation Section -->
+    <section id="event-delegation" class="section-bg-5">
+      <div class="bg-dark text-white text-center py-3">
         <h2 class="mb-0">Event Delegation</h2>
-    </div>
-    <div class="content-area">
+      </div>
+      <div class="content-area">
         <div id="provinceButtons">
-            <button class="delegatedButton">Ontario</button>
-            <button class="delegatedButton">Quebec</button>
-            <button class="delegatedButton">British Columbia</button>
+          <button class="delegatedButton">Ontario</button>
+          <button class="delegatedButton">Quebec</button>
+          <button class="delegatedButton">British Columbia</button>
         </div>
         <div id="provinceInfo">
-            Click on a province to see more information!
+          Click on a province to see more information!
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Footer -->
-<footer class="bg-dark text-white text-center py-3 mt-5">
-    <div class="container">
-      <p class="mb-0">© 2025 Event Handling Lab. All rights reserved.</p>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+      <div class="container">
+        <p class="mb-0">© 2025 Event Handling Lab. All rights reserved.</p>
+      </div>
+    </footer>
 
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

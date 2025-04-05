@@ -1,439 +1,436 @@
-
 /* Header Image Styling */
 .header-image img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
-
 .nav-buttons {
-    text-align: center;
-    background-color: #06284b; 
-    padding: 10px 0;
-    margin: 10px 0; 
-    position: sticky;
-    top: 0;
-    z-index: 999; 
+  text-align: center;
+  background-color: #06284b;
+  padding: 10px 0;
+  margin: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .nav-btn {
-    text-decoration: none;
-    color: #c5cf3b; 
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin: 025px;
-    transition: color 0.5ease;
+  text-decoration: none;
+  color: #c5cf3b;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 025px;
+  transition: color 0.5ease;
 }
 
 .nav-btn:hover {
-    color: #ce5a6f; 
-    text-decoration: underline;
+  color: #ce5a6f;
+  text-decoration: underline;
 }
 
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* Adjust according to navbar height */
-  }
-
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Adjust according to navbar height */
+}
 
 /* ====== Mouse Events Section ====== */
 #mouse-events {
-    padding: 0px;
-    height: 500px;
-    background-color: #f8d7da;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 0px;
+  height: 500px;
+  background-color: #f8d7da;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #mouse-events .bg-dark {
-    background-color: #e7a2a2 !important;
-    margin-top: -135px;
-    width: 100%;
-    padding: 0;
+  background-color: #e7a2a2 !important;
+  margin-top: -135px;
+  width: 100%;
+  padding: 0;
 }
 #mouse-events h2 {
-    margin-bottom: 0;
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    font-size: 28px;
-    color: #55091a;
+  margin-bottom: 0;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  color: #55091a;
 }
 .ripple-btn {
-    position: relative;
-    padding: 15px 10px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 25px;
-    background-color: #9f4f74;
-    color: white;
-    border: none;
-    outline: none;
-    transition: background-color 0.3s;
-    width: 185px;
-    height: 100px;
-    margin-top: 110px;
+  position: relative;
+  padding: 15px 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 25px;
+  background-color: #9f4f74;
+  color: white;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s;
+  width: 185px;
+  height: 100px;
+  margin-top: 110px;
 }
 .ripple-btn:hover {
-    background-color: #042a53;
+  background-color: #042a53;
 }
 #messageBox {
-    padding: 15px 10px;
-    font-size: 1.7rem;
-    background-color: #e7a2a2 !important;
-    margin-top: 80px;
-    width: 460px;
-    height: 180px;
-    align-items: center;
+  padding: 15px 10px;
+  font-size: 1.7rem;
+  background-color: #e7a2a2 !important;
+  margin-top: 80px;
+  width: 460px;
+  height: 180px;
+  align-items: center;
 }
 .ripple {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.6);
-    transform: scale(0);
-    animation: ripple-animation 0.6s linear;
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(0);
+  animation: ripple-animation 0.6s linear;
 }
 @keyframes ripple-animation {
-    to {
-        transform: scale(4);
-        opacity: 0;
-    }
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
 }
 #messageBox.hovering {
-    color: #007bff;
-    font-size: 20px;
-    opacity: 1;
-    background-color: #f0f8ff;
+  color: #007bff;
+  font-size: 20px;
+  opacity: 1;
+  background-color: #f0f8ff;
 }
 #messageBox.clicked {
-    color: #830116;
-    font-size: 1.8rem;
-    transform: scale(1.1);
-    background-color: #d4edda;
+  color: #830116;
+  font-size: 1.8rem;
+  transform: scale(1.1);
+  background-color: #d4edda;
 }
 
 section .d-flex {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
-#mouseButton, #messageBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#mouseButton,
+#messageBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ====== Keyboard Events Section ====== */
 #keyboard-events {
-    padding: 0px;
-    height: 500px;
-    background-color: #cce5ff;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 0px;
+  height: 500px;
+  background-color: #cce5ff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #keyboard-events .bg-dark {
-    background-color: #66b3ff !important;
-    margin-top: -240px;
-    width: 100%;
-    padding: 0;
-    padding-top: 5%;
+  background-color: #66b3ff !important;
+  margin-top: -240px;
+  width: 100%;
+  padding: 0;
+  padding-top: 5%;
 }
 #keyboard-events h2 {
-    margin-bottom: 0;
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    font-size: 28px;
-    color: #004085;
+  margin-bottom: 0;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  color: #004085;
 }
 #keyboardInput {
-    padding: 15px;
-    font-size: 1.7rem;
-    width: 300px;
-    border-radius: 8px;
-    height: 120px;
-    border: 2px solid #0069d9;
-    background-color: #f9f9f9;
-    transition: background-color 0.3s ease;
+  padding: 15px;
+  font-size: 1.7rem;
+  width: 300px;
+  border-radius: 8px;
+  height: 120px;
+  border: 2px solid #0069d9;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
 }
 #keyboardInput:focus {
-    background-color: #e9f7ff;
+  background-color: #e9f7ff;
 }
 .keyboard-result {
-    width: 350px;
-    height: 120px;
-    border: 2px solid #0069d9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.7rem;
-    font-weight: bold;
-    padding-left: 15px;
-    color: #004085;
-    background-color: #f9f9f9;
+  width: 350px;
+  height: 120px;
+  border: 2px solid #0069d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding-left: 15px;
+  color: #004085;
+  background-color: #f9f9f9;
 }
-#keyboardInput, #keyPressed {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#keyboardInput,
+#keyPressed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ====================== FORM EVENTS ==================== */
 
 /* Form Events Section Styling */
 #form-events {
-    padding: 0px;
-    height: 500px;  
-    background-color: #f1ceef; 
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 0px;
+  height: 500px;
+  background-color: #f1ceef;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #form-events .bg-dark {
-    background-color: #f078dc !important; 
-    margin-top: -145px;
-    width: 100%;
-    padding: 0;
+  background-color: #f078dc !important;
+  margin-top: -145px;
+  width: 100%;
+  padding: 0;
 }
 
 #form-events h2 {
-    margin-bottom: 0;
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    font-size: 28px;
-    color: #004085; 
+  margin-bottom: 0;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  color: #004085;
 }
 
 /* Form and Input Box Styling */
 #userForm {
-    background-color: #f0b6e6; 
-    padding: 20px;
-    border: 2px solid #b354eb;
-    border-radius: 10px;
-    width: 450px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: #f0b6e6;
+  padding: 20px;
+  border: 2px solid #b354eb;
+  border-radius: 10px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #userForm input {
-    width: 100%;
-    padding: 10px;
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #007bff;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #007bff;
 }
 
 /* Submit and Reset Button Styling */
 #userForm button {
-    margin: 5px;
-    padding: 8px 20px;
-    font-size: 1rem;
-    border-radius: 20px;
-    border: none;
-    background-color: #3399ff;
-    color: white;
-    transition: background-color 0.3s;
+  margin: 5px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  border-radius: 20px;
+  border: none;
+  background-color: #3399ff;
+  color: white;
+  transition: background-color 0.3s;
 }
 
 #userForm button:hover {
-    background-color: #ff00b3;
+  background-color: #ff00b3;
 }
 
 /* Form Message Box Styling */
 #formMessageBox {
-    background-color: #f8f9fa;
-    padding: 20px;
-    font-size: 1.4rem;
-    text-align: center;
-    border: 1px solid #ced4da;
-    border-radius: 8px;
-    display: none; /* Hidden initially */
-    width: 350px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  font-size: 1.4rem;
+  text-align: center;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  display: none; /* Hidden initially */
+  width: 350px;
 }
 
 /* Hide Reset button initially */
 #resetButton {
-    display: none; 
+  display: none;
 }
 
 /* Gap between form and message box */
 #form-events .d-flex {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: 30px;
 }
-
 
 /* =================== Focun And Blur========================= */
 /* ================== FOCUS & BLUR EVENTS ==================== */
 
 #focus-blur-events {
-    padding: 0;
-    height: 500px;
-    background-color: #d1ecf1; /* Light cyan background */
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 0;
+  height: 500px;
+  background-color: #d1ecf1; /* Light cyan background */
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Title Bar Styling */
 #focus-blur-events .bg-dark {
-    background-color: #70c9d0 !important; 
-    margin-top: -240px;
-    width: 100%;
-    padding: 0;
+  background-color: #70c9d0 !important;
+  margin-top: -240px;
+  width: 100%;
+  padding: 0;
 }
 
 #focus-blur-events h2 {
-    margin-bottom: 0;
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    font-size: 28px;
-    color: #004d5b;
+  margin-bottom: 0;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  color: #004d5b;
 }
 
 /* Input Box Styling */
 #focusInput {
-    padding: 15px;
-    font-size: 1.7rem;
-    width: 300px;
-    border-radius: 8px;
-    height: 120px;
-    border: 2px solid #17a2b8; 
-    background-color: #f9f9f9;
-    transition: all 0.3s ease;
+  padding: 15px;
+  font-size: 1.7rem;
+  width: 300px;
+  border-radius: 8px;
+  height: 120px;
+  border: 2px solid #17a2b8;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
 }
 
 /* Focused Input Field */
 #focusInput:focus {
-    background-color: #e0f7fa;
-    border-color: #0d6efd;
+  background-color: #e0f7fa;
+  border-color: #0d6efd;
 }
 
 /* Message Box Styling */
 .focus-blur-result {
-    width: 350px;
-    height: 120px;
-    border: 2px solid #17a2b8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.7rem;
-    font-weight: bold;
-    padding-left: 15px;
-    color: #004d5b;
-    background-color: #f9f9f9;
-    transition: all 0.3s ease;
+  width: 350px;
+  height: 120px;
+  border: 2px solid #17a2b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding-left: 15px;
+  color: #004d5b;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
 }
-
 
 /* ====================== EVENT DELEGATION SECTION ==================== */
 
 /* Event Delegation Section Styling */
 #event-delegation {
-    padding: 0;
-    height: 500px; /* Match other sections */
-    background-color: #f8c2d0; /* Light pink background */
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  padding: 0;
+  height: 500px; /* Match other sections */
+  background-color: #f8c2d0; /* Light pink background */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Event Title Styling */
 #event-delegation .bg-dark {
-    background-color: #f080a1 !important; /* Deeper shade of pink */
-    margin-top: -145px;
-    width: 100%;
-    padding: 0;
+  background-color: #f080a1 !important; /* Deeper shade of pink */
+  margin-top: -145px;
+  width: 100%;
+  padding: 0;
 }
 
 #event-delegation h2 {
-    margin-bottom: 0;
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    font-size: 28px;
-    color: #721c24;
+  margin-bottom: 0;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  color: #721c24;
 }
 
 /* Content Area  */
 #event-delegation .content-area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px; 
-    margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 40px;
 }
 
 /* Province Buttons Container */
 #provinceButtons {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; 
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* Individual Province Buttons */
 .delegatedButton {
-    padding: 15px 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: 2px solid #444;
-    border-radius: 20px;
-    background-color: white;
-    transition: all 0.3s ease;
-    min-width: 180px;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 2px solid #444;
+  border-radius: 20px;
+  background-color: white;
+  transition: all 0.3s ease;
+  min-width: 180px;
 }
 
 /* Unique Button Colors */
 .delegatedButton:nth-child(1) {
-    color: #007bff; 
+  color: #007bff;
 }
 
 .delegatedButton:nth-child(2) {
-    color: #28a745; 
+  color: #28a745;
 }
 
 .delegatedButton:nth-child(3) {
-    color: #ff9900;
+  color: #ff9900;
 }
 
 /* Button Hover Effect */
 .delegatedButton:hover {
-    background-color: #ffe6f0;
-    transform: scale(1.05);
+  background-color: #ffe6f0;
+  transform: scale(1.05);
 }
 
 /* Glow effect on active button */
 .delegatedButton.active {
-    box-shadow: 0 0 10px 3px rgba(255, 0, 150, 0.7); 
+  box-shadow: 0 0 10px 3px rgba(255, 0, 150, 0.7);
 }
 
 /* Province Info Box */
 #provinceInfo {
-    padding: 20px;
-    width: 400px;
-    min-height: 180px;
-    background-color: #f9f9f9;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #721c24; 
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 20px;
+  width: 400px;
+  min-height: 180px;
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #721c24;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Footer Styling */
 footer {
-    font-size: 1rem;
+  font-size: 1rem;
 }
